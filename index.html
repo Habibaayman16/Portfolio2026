@@ -1308,6 +1308,31 @@
 @media(max-width:900px){.recommendation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navbar{gap:5px}.navbar a{font-size:12px;padding:7px 4px}}
 @media(max-width:768px){.tech-grid,.certificate-grid,.recommendation-stats,.recommendation-grid{grid-template-columns:1fr}.extra-section{padding:32px 18px 50px}.tech-list{grid-template-columns:1fr 1fr}.recommendation-head .main-div{margin-bottom:25px}}
 
+
+/* Recommendations section layout fixes */
+.recommendations-section{padding:72px 6%;background:var(--light-bg);overflow:hidden}
+.recommendations-top{max-width:1120px;margin:0 auto 32px;display:flex;align-items:flex-end;justify-content:space-between;gap:28px}
+.recommendations-title-wrap{min-width:0;max-width:720px}
+.recommendations-eyebrow{font-size:11px;letter-spacing:2px;font-weight:700;color:var(--secondary);margin-bottom:13px}
+.recommendations-title{font-size:clamp(28px,3.3vw,42px);line-height:1.2;color:var(--text);margin-bottom:14px;font-weight:700}
+.recommendations-description{font-size:15px;line-height:1.8;color:var(--text);opacity:.78;max-width:650px}
+.recommendations-section .recommendation-stats{max-width:1120px;margin:0 auto 22px;grid-template-columns:repeat(3,minmax(0,1fr))}
+.recommendations-section .recommendation-stat{display:flex;align-items:center;justify-content:flex-start;gap:14px;text-align:left;padding:20px;background:var(--card-bg);border:1px solid var(--border);border-radius:15px;min-width:0}
+.recommendations-section .recommendation-stat strong{font-size:20px;line-height:1.4;overflow-wrap:anywhere}
+.recommendations-section .recommendation-stat span:not(.stat-icon){display:block;color:var(--text);opacity:.72;font-size:12px;line-height:1.5}
+.recommendations-section .stat-icon{display:flex;align-items:center;justify-content:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:var(--light-green);color:var(--primary);font-size:22px}
+.recommendations-section .recommendation-grid{max-width:1120px;grid-template-columns:1fr}
+.recommendations-empty{width:100%;padding:38px 24px;text-align:center;border:1px dashed var(--border);border-radius:16px;background:var(--card-bg)}
+.empty-quote{display:block;font-family:Georgia,serif;font-size:66px;line-height:.9;color:var(--secondary);opacity:.8}
+.recommendations-empty h3{font-size:19px;color:var(--text);margin:12px 0 8px}
+.recommendations-empty p{max-width:520px;margin:0 auto;color:var(--text);opacity:.75;font-size:14px;line-height:1.8}
+.empty-add-btn{margin-top:18px;border:1px solid var(--secondary);background:transparent;color:var(--primary);padding:10px 15px;border-radius:9px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+body.dark-mode .empty-add-btn{color:var(--text)}
+.recommendations-section .add-recommendation-btn{white-space:nowrap;flex-shrink:0;display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:46px}
+.recommendations-section .add-recommendation-btn span{font-size:19px;line-height:1}
+.recommendation-form{box-shadow:0 24px 80px rgba(0,0,0,.25)}
+@media(max-width:760px){.recommendations-section{padding:48px 18px}.recommendations-top{align-items:stretch;flex-direction:column;gap:18px;margin-bottom:24px}.recommendations-section .add-recommendation-btn{align-self:flex-start}.recommendations-section .recommendation-stats{grid-template-columns:1fr;gap:11px}.recommendations-section .recommendation-stat{padding:15px}.recommendations-empty{padding:30px 17px}.recommendations-title{font-size:30px}}
+
     </style>
 </head>
 
@@ -5976,11 +6001,28 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 <article class="certificate-card"><div class="certificate-image-placeholder"><strong>Certificate Image 03</strong><span>Replace this area with your certificate photo</span></div><h3>Certificate / Achievement Title</h3><p>Issuing organization · Year</p><span class="certificate-tag">Achievement</span></article>
 <article class="certificate-card"><div class="certificate-image-placeholder"><strong>Certificate Image 04</strong><span>Replace this area with your certificate photo</span></div><h3>Certificate / Training Title</h3><p>Issuing organization · Year</p><span class="certificate-tag">Training</span></article>
 </div></section>
-<section id="recommendations" class="extra-section">
-<div class="recommendation-head"><div class="main-div"><h2 class="main-title">Collaborator Feedback</h2><p class="second-title">recommendations</p></div><button type="button" class="add-recommendation-btn" id="open-recommendation">+ Add Recommendation</button></div>
-<p class="extra-intro">Peer endorsements and recommendations from people I have worked and collaborated with.</p>
-<div class="recommendation-stats"><div class="recommendation-stat"><strong id="average-rating">— / 5</strong><span>Peer Rating</span></div><div class="recommendation-stat"><strong id="recommendation-count">0</strong><span>Recommendations</span></div><div class="recommendation-stat"><strong>Teamwork</strong><span>Projects &amp; collaboration</span></div></div>
-<div class="recommendation-grid" id="recommendation-list"><article class="recommendation-card"><div class="stars">★★★★★</div><span class="recommendation-avatar">?</span><h3>Your first recommendation</h3><p class="role">Teammate · Project</p><blockquote>Recommendations shared through the form will appear here in this page preview.</blockquote><span class="context-tag">TEAM COLLABORATION</span></article></div>
+<section id="recommendations" class="extra-section recommendations-section">
+    <div class="recommendations-top">
+        <div class="recommendations-title-wrap">
+            <p class="recommendations-eyebrow">PEER ENDORSEMENTS &amp; RECOMMENDATIONS</p>
+            <h2 class="recommendations-title">Collaborator Feedback</h2>
+            <p class="recommendations-description">Thoughts and feedback from people I have collaborated with on projects, training, and team activities.</p>
+        </div>
+        <button type="button" class="add-recommendation-btn" id="open-recommendation"><span aria-hidden="true">＋</span> Add Recommendation</button>
+    </div>
+    <div class="recommendation-stats">
+        <div class="recommendation-stat"><span class="stat-icon" aria-hidden="true">★</span><div><strong id="average-rating">—</strong><span>Average rating</span></div></div>
+        <div class="recommendation-stat"><span class="stat-icon" aria-hidden="true">♡</span><div><strong id="recommendation-count">0</strong><span>Recommendations received</span></div></div>
+        <div class="recommendation-stat"><span class="stat-icon" aria-hidden="true">↗</span><div><strong>Teamwork</strong><span>Projects &amp; collaboration</span></div></div>
+    </div>
+    <div class="recommendation-grid" id="recommendation-list">
+        <div class="recommendations-empty" id="recommendations-empty">
+            <span class="empty-quote" aria-hidden="true">“</span>
+            <h3>Your recommendations will appear here</h3>
+            <p>Invite a teammate or collaborator to share feedback using the button above. Their rating and recommendation will be displayed here.</p>
+            <button type="button" class="empty-add-btn" id="empty-open-recommendation">Add the first recommendation</button>
+        </div>
+    </div>
 </section>
 <div class="recommendation-modal" id="recommendation-modal" role="dialog" aria-modal="true" aria-labelledby="recommendation-modal-title"><form class="recommendation-form" id="recommendation-form">
 <p class="eyebrow">PEER ENDORSEMENT</p><h2 id="recommendation-modal-title">Add a Recommendation</h2>
@@ -6527,14 +6569,14 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 (function(){
 const modal=document.getElementById('recommendation-modal'),form=document.getElementById('recommendation-form'),list=document.getElementById('recommendation-list'),buttons=Array.from(document.querySelectorAll('#rating-picker button'));let rating=5;
 function close(){modal.classList.remove('open')}
-document.getElementById('open-recommendation').addEventListener('click',()=>modal.classList.add('open'));
+function openModal(){modal.classList.add('open')}\ndocument.getElementById('open-recommendation').addEventListener('click',openModal);\nconst emptyOpen=document.getElementById('empty-open-recommendation');if(emptyOpen)emptyOpen.addEventListener('click',openModal);
 document.getElementById('close-recommendation').addEventListener('click',close);
 modal.addEventListener('click',e=>{if(e.target===modal)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
 buttons.forEach(b=>b.addEventListener('click',()=>{rating=Number(b.dataset.rating);buttons.forEach(x=>x.classList.toggle('selected',Number(x.dataset.rating)<=rating));document.getElementById('rating-label').textContent=rating.toFixed(1)+(rating===5?' · Exceptional':rating>=4?' · Great':rating>=3?' · Good':' · Feedback')}));
 form.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('rec-name').value.trim(),role=document.getElementById('rec-role').value.trim(),context=document.getElementById('rec-context').value,feedback=document.getElementById('rec-feedback').value.trim();if(!name||!role||feedback.length<10)return;
 const card=document.createElement('article');card.className='recommendation-card';function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;n.textContent=txt;return n}
 card.append(el('div','stars','★'.repeat(rating)+'☆'.repeat(5-rating)),el('span','recommendation-avatar',name.split(/\s+/).slice(0,2).map(x=>x[0]).join('').toUpperCase()),el('h3','',name),el('p','role',role),el('blockquote','',feedback),el('span','context-tag',context.toUpperCase()));
-if(list.textContent.includes('Your first recommendation'))list.innerHTML='';list.prepend(card);const cards=Array.from(list.querySelectorAll('.recommendation-card')),scores=cards.map(c=>(c.querySelector('.stars').textContent.match(/★/g)||[]).length);document.getElementById('recommendation-count').textContent=cards.length;document.getElementById('average-rating').textContent=(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1)+' / 5';form.reset();rating=5;buttons.forEach(x=>x.classList.toggle('selected',Number(x.dataset.rating)<=5));document.getElementById('rating-label').textContent='5.0 · Exceptional';close()});
+const emptyState=document.getElementById('recommendations-empty');if(emptyState)emptyState.remove();list.prepend(card);const cards=Array.from(list.querySelectorAll('.recommendation-card')),scores=cards.map(c=>(c.querySelector('.stars').textContent.match(/★/g)||[]).length);document.getElementById('recommendation-count').textContent=cards.length;document.getElementById('average-rating').textContent=(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1)+' / 5';form.reset();rating=5;buttons.forEach(x=>x.classList.toggle('selected',Number(x.dataset.rating)<=5));document.getElementById('rating-label').textContent='5.0 · Exceptional';close()});
 })();
 </script>
 </body>
