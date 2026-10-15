@@ -1297,6 +1297,17 @@
             display: block;
         }
 
+
+/* Added sections — preserve existing theme variables */
+.extra-section{padding:40px 35px 70px}.extra-section.alt{background:var(--light-bg)}.extra-intro{max-width:760px;margin:-45px auto 38px;text-align:center;line-height:1.7;color:var(--text);opacity:.85}
+.tech-grid,.certificate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;max-width:1100px;margin:auto}.tech-card,.certificate-card,.recommendation-card{background:var(--card-bg);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 6px 22px rgba(22,66,60,.08);transition:.3s}.tech-card:hover,.certificate-card:hover,.recommendation-card:hover{transform:translateY(-5px)}.tech-card h3,.certificate-card h3,.recommendation-card h3{color:var(--primary);margin-bottom:7px}.tech-subtitle{font-size:13px;color:var(--secondary);margin-bottom:16px}.tech-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tech-item{display:flex;align-items:center;gap:8px;padding:10px;border-radius:9px;background:var(--light-bg);font-size:13px}.tech-dot{width:9px;height:9px;flex:0 0 9px;border-radius:50%;background:var(--secondary)}.tech-item small{margin-left:auto;color:var(--secondary);font-size:10px}
+.certificate-image-placeholder{min-height:200px;border:2px dashed var(--secondary);border-radius:11px;background:var(--light-bg);display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:10px;padding:18px;color:var(--secondary)}.certificate-image-placeholder strong{color:var(--primary)}.certificate-image-placeholder span{font-size:12px}.certificate-card p{font-size:14px;line-height:1.6}.certificate-tag,.context-tag{display:inline-block;margin-top:12px;padding:5px 10px;border-radius:18px;background:var(--light-green);color:var(--primary);font-size:11px;font-weight:700}
+.recommendation-head{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;max-width:1100px;margin:auto}.recommendation-head .main-div{flex:1;margin:20px 0 35px}.add-recommendation-btn,.publish-recommendation{background:var(--primary);color:#fff;border:0;border-radius:10px;padding:12px 17px;font:inherit;font-weight:700;cursor:pointer}.recommendation-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;max-width:1100px;margin:0 auto 22px}.recommendation-stat{text-align:center;padding:17px;background:var(--card-bg);border:1px solid var(--border);border-radius:13px}.recommendation-stat strong{display:block;color:var(--primary);font-size:20px}.recommendation-stat span{font-size:12px}.recommendation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px;max-width:1100px;margin:auto}.recommendation-card .stars{color:#d6a83f;letter-spacing:2px;margin-bottom:12px}.recommendation-card .role{color:var(--secondary);font-size:12px}.recommendation-card blockquote{font-size:14px;line-height:1.7;margin-top:12px}.recommendation-avatar{display:inline-flex;width:36px;height:36px;border-radius:50%;align-items:center;justify-content:center;background:var(--light-green);color:var(--primary);font-weight:700}
+.recommendation-modal{display:none;position:fixed;inset:0;z-index:2000;background:rgba(0,0,0,.68);padding:18px;align-items:center;justify-content:center}.recommendation-modal.open{display:flex}.recommendation-form{width:min(600px,100%);max-height:90vh;overflow:auto;padding:24px;background:var(--white);color:var(--text);border:1px solid var(--border);border-radius:16px}.recommendation-form .eyebrow{color:var(--secondary);font-size:11px;letter-spacing:1.3px}.recommendation-form h2{margin:8px 0 18px}.recommendation-form label{display:block;font-size:13px;font-weight:700;margin:12px 0 6px}.recommendation-form input,.recommendation-form select,.recommendation-form textarea{width:100%;padding:11px;border:1px solid var(--border);border-radius:8px;background:var(--light-bg);color:var(--text);font:inherit;font-size:14px}.recommendation-form textarea{min-height:100px;resize:vertical}.rating-picker{display:flex;gap:7px}.rating-picker button{border:0;background:none;color:#aaa;font-size:28px;cursor:pointer}.rating-picker button.selected{color:#d6a83f}.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.cancel-recommendation{border:1px solid var(--border);border-radius:9px;padding:11px 16px;background:transparent;color:var(--text);cursor:pointer}
+.project-image-placeholder{height:150px;width:100%;border:2px dashed var(--secondary);border-radius:11px;background:var(--light-bg);display:flex;flex-direction:column;justify-content:center;align-items:center;gap:7px;color:var(--secondary);margin:0 auto 18px;padding:12px}.project-image-placeholder strong{color:var(--primary)}.project-image-placeholder small{font-size:11px}
+@media(max-width:900px){.recommendation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.navbar{gap:5px}.navbar a{font-size:12px;padding:7px 4px}}
+@media(max-width:768px){.tech-grid,.certificate-grid,.recommendation-stats,.recommendation-grid{grid-template-columns:1fr}.extra-section{padding:32px 18px 50px}.tech-list{grid-template-columns:1fr 1fr}.recommendation-head .main-div{margin-bottom:25px}}
+
     </style>
 </head>
 
@@ -1333,11 +1344,11 @@
             <a href="#about">About</a>
 
             <a href="#services">What I Do</a>
-
+            <a href="#technical-skills">Skills</a>
             <a href="#summary">Resume</a>
-
             <a href="#projects">Projects</a>
-
+            <a href="#certifications">Certificates</a>
+            <a href="#recommendations">Recommendations</a>
             <a href="#Contact">Contact</a>
 
         </nav>
@@ -5086,6 +5097,15 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
 
 
+<section id="technical-skills" class="extra-section">
+<div class="main-div"><h2 class="main-title">Technical Skills</h2><p class="second-title">skills</p></div>
+<p class="extra-intro">Technologies and tools I am learning and using across front-end, .NET, databases, and data analytics.</p>
+<div class="tech-grid">
+<article class="tech-card"><h3>Frontend Development</h3><p class="tech-subtitle">Responsive interfaces · 5 Techs</p><div class="tech-list"><div class="tech-item"><i class="tech-dot"></i>HTML5 <small>Core</small></div><div class="tech-item"><i class="tech-dot"></i>CSS3 <small>Core</small></div><div class="tech-item"><i class="tech-dot"></i>JavaScript <small>Core</small></div><div class="tech-item"><i class="tech-dot"></i>Responsive Design</div><div class="tech-item"><i class="tech-dot"></i>UI Implementation</div></div></article>
+<article class="tech-card"><h3>Backend &amp; .NET APIs</h3><p class="tech-subtitle">Server-side fundamentals · 4 Techs</p><div class="tech-list"><div class="tech-item"><i class="tech-dot"></i>C# <small>Learning</small></div><div class="tech-item"><i class="tech-dot"></i>ASP.NET Core <small>Learning</small></div><div class="tech-item"><i class="tech-dot"></i>REST APIs</div><div class="tech-item"><i class="tech-dot"></i>OOP</div></div></article>
+<article class="tech-card"><h3>Databases &amp; Tools</h3><p class="tech-subtitle">Data storage and version control · 4 Techs</p><div class="tech-list"><div class="tech-item"><i class="tech-dot"></i>SQL Server <small>Core</small></div><div class="tech-item"><i class="tech-dot"></i>SQL</div><div class="tech-item"><i class="tech-dot"></i>Git &amp; GitHub</div><div class="tech-item"><i class="tech-dot"></i>Visual Studio</div></div></article>
+<article class="tech-card"><h3>Data Analytics &amp; AI</h3><p class="tech-subtitle">Analysis and machine learning · 4 Techs</p><div class="tech-list"><div class="tech-item"><i class="tech-dot"></i>Python</div><div class="tech-item"><i class="tech-dot"></i>Pandas &amp; NumPy</div><div class="tech-item"><i class="tech-dot"></i>Power BI / Tableau</div><div class="tech-item"><i class="tech-dot"></i>Scikit-learn</div></div></article>
+</div></section>
 <!-- =========================
      RESUME
 ========================= -->
@@ -5754,9 +5774,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    🤖
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     Diabetes Prediction Model
@@ -5783,9 +5801,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    📩
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     Spam Detection NLP
@@ -5812,9 +5828,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    📚
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     Bookstore Website
@@ -5841,9 +5855,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    🧁
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     Bakery Website
@@ -5871,9 +5883,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    📊
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     HR Analytics Dashboard
@@ -5900,9 +5910,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    📈
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     Data Visualization Dashboard
@@ -5929,9 +5937,7 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 
             <div class="project-card">
 
-                <div class="project-icon">
-                    💻
-                </div>
+                <div class="project-image-placeholder"><strong>Project Image</strong><small>Add your screenshot here</small></div>
 
                 <h3>
                     Portfolio Website
@@ -5960,6 +5966,31 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 </div>
 
 
+
+<section id="certifications" class="extra-section alt">
+<div class="main-div"><h2 class="main-title">Certifications &amp; Honors</h2><p class="second-title">certificates</p></div>
+<p class="extra-intro">Your certificates and achievements. Replace each placeholder with your certificate image when you are ready.</p>
+<div class="certificate-grid">
+<article class="certificate-card"><div class="certificate-image-placeholder"><strong>Certificate Image 01</strong><span>Replace this area with your certificate photo</span></div><h3>Certificate / Achievement Title</h3><p>Issuing organization · Year</p><span class="certificate-tag">Certificate</span></article>
+<article class="certificate-card"><div class="certificate-image-placeholder"><strong>Certificate Image 02</strong><span>Replace this area with your certificate photo</span></div><h3>Certificate / Training Title</h3><p>Issuing organization · Year</p><span class="certificate-tag">Training</span></article>
+<article class="certificate-card"><div class="certificate-image-placeholder"><strong>Certificate Image 03</strong><span>Replace this area with your certificate photo</span></div><h3>Certificate / Achievement Title</h3><p>Issuing organization · Year</p><span class="certificate-tag">Achievement</span></article>
+<article class="certificate-card"><div class="certificate-image-placeholder"><strong>Certificate Image 04</strong><span>Replace this area with your certificate photo</span></div><h3>Certificate / Training Title</h3><p>Issuing organization · Year</p><span class="certificate-tag">Training</span></article>
+</div></section>
+<section id="recommendations" class="extra-section">
+<div class="recommendation-head"><div class="main-div"><h2 class="main-title">Collaborator Feedback</h2><p class="second-title">recommendations</p></div><button type="button" class="add-recommendation-btn" id="open-recommendation">+ Add Recommendation</button></div>
+<p class="extra-intro">Peer endorsements and recommendations from people I have worked and collaborated with.</p>
+<div class="recommendation-stats"><div class="recommendation-stat"><strong id="average-rating">— / 5</strong><span>Peer Rating</span></div><div class="recommendation-stat"><strong id="recommendation-count">0</strong><span>Recommendations</span></div><div class="recommendation-stat"><strong>Teamwork</strong><span>Projects &amp; collaboration</span></div></div>
+<div class="recommendation-grid" id="recommendation-list"><article class="recommendation-card"><div class="stars">★★★★★</div><span class="recommendation-avatar">?</span><h3>Your first recommendation</h3><p class="role">Teammate · Project</p><blockquote>Recommendations shared through the form will appear here in this page preview.</blockquote><span class="context-tag">TEAM COLLABORATION</span></article></div>
+</section>
+<div class="recommendation-modal" id="recommendation-modal" role="dialog" aria-modal="true" aria-labelledby="recommendation-modal-title"><form class="recommendation-form" id="recommendation-form">
+<p class="eyebrow">PEER ENDORSEMENT</p><h2 id="recommendation-modal-title">Add a Recommendation</h2>
+<label for="rec-name">Your Full Name *</label><input id="rec-name" required maxlength="100" placeholder="Enter your full name">
+<label for="rec-role">Your Role / Company *</label><input id="rec-role" required maxlength="120" placeholder="e.g. Developer, Project Team">
+<label for="rec-context">Collaboration Context *</label><select id="rec-context"><option>Colleague / Teammate</option><option>Project Collaboration</option><option>Hackathon</option><option>Training / Course</option><option>Other</option></select>
+<label>Rating *</label><div class="rating-picker" id="rating-picker"><button type="button" data-rating="1">★</button><button type="button" data-rating="2">★</button><button type="button" data-rating="3">★</button><button type="button" data-rating="4">★</button><button type="button" data-rating="5" class="selected">★</button></div><p id="rating-label" style="font-size:12px;color:var(--secondary);margin-top:4px">5.0 · Exceptional</p>
+<label for="rec-feedback">Your Recommendation / Feedback *</label><textarea id="rec-feedback" required minlength="10" maxlength="1200" placeholder="Share how we worked together and the contribution you appreciated."></textarea>
+<div class="form-actions"><button type="submit" class="publish-recommendation">Publish Recommendation ✨</button><button type="button" class="cancel-recommendation" id="close-recommendation">Cancel</button></div><p style="font-size:11px;opacity:.7;margin-top:12px">Demo form: entries appear on this page only and are not sent to a server.</p>
+</form></div>
 
 <!-- =========================
      CONTACT
@@ -6492,5 +6523,19 @@ c7O9MnLTXNcT//4AAwD/2Q=="  alt="Habiba Ayman" class="about-img">
 </script>
 
 
+<script>
+(function(){
+const modal=document.getElementById('recommendation-modal'),form=document.getElementById('recommendation-form'),list=document.getElementById('recommendation-list'),buttons=Array.from(document.querySelectorAll('#rating-picker button'));let rating=5;
+function close(){modal.classList.remove('open')}
+document.getElementById('open-recommendation').addEventListener('click',()=>modal.classList.add('open'));
+document.getElementById('close-recommendation').addEventListener('click',close);
+modal.addEventListener('click',e=>{if(e.target===modal)close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+buttons.forEach(b=>b.addEventListener('click',()=>{rating=Number(b.dataset.rating);buttons.forEach(x=>x.classList.toggle('selected',Number(x.dataset.rating)<=rating));document.getElementById('rating-label').textContent=rating.toFixed(1)+(rating===5?' · Exceptional':rating>=4?' · Great':rating>=3?' · Good':' · Feedback')}));
+form.addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('rec-name').value.trim(),role=document.getElementById('rec-role').value.trim(),context=document.getElementById('rec-context').value,feedback=document.getElementById('rec-feedback').value.trim();if(!name||!role||feedback.length<10)return;
+const card=document.createElement('article');card.className='recommendation-card';function el(tag,cls,txt){const n=document.createElement(tag);if(cls)n.className=cls;n.textContent=txt;return n}
+card.append(el('div','stars','★'.repeat(rating)+'☆'.repeat(5-rating)),el('span','recommendation-avatar',name.split(/\s+/).slice(0,2).map(x=>x[0]).join('').toUpperCase()),el('h3','',name),el('p','role',role),el('blockquote','',feedback),el('span','context-tag',context.toUpperCase()));
+if(list.textContent.includes('Your first recommendation'))list.innerHTML='';list.prepend(card);const cards=Array.from(list.querySelectorAll('.recommendation-card')),scores=cards.map(c=>(c.querySelector('.stars').textContent.match(/★/g)||[]).length);document.getElementById('recommendation-count').textContent=cards.length;document.getElementById('average-rating').textContent=(scores.reduce((a,b)=>a+b,0)/scores.length).toFixed(1)+' / 5';form.reset();rating=5;buttons.forEach(x=>x.classList.toggle('selected',Number(x.dataset.rating)<=5));document.getElementById('rating-label').textContent='5.0 · Exceptional';close()});
+})();
+</script>
 </body>
 </html>
